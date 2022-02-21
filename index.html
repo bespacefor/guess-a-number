@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Guess a number</title>
+</head>
+<body>
+    <main>
+        <div class="play">
+            <h1>Guess a random number</h1>
+            <div class="secret">
+                <span class="hint">Click here to use tooltip</span>
+                <p class="answer"></p>
+            </div>
+            <div class="guess">
+                <form data-tooltip="Enter a 4-digit number. The first digit cannot be zero." action="">
+                    <p>Enter your guess:</p>
+                    <input id="inp" type="text" placeholder="1234" autocomplete="off" maxlength="4">
+                    <p><input id="btn" type="submit" value="Let's check!"></p>
+                </form>
+            </div>
+            <div id="info"></div>
+            <div id="error" class="hidden">The entered value is incorrect! The number must be four digits. It should consist of different digits, and the first digit must not be equal to 0.</div>
+        </div>
+        <div class="winner">
+            <form action="" id="winner-data">
+                <p>Enter your name:</p>
+                <input id="test" type="text" placeholder="Mulder" autocomplete="off">
+                <p>
+                    <input id="save" type="submit" value="Save game score">
+                    <input id="show" type="submit" value="Show game score">
+                </p>
+                <p id="score">Congratulations!</p>
+                <ol class="list"></ol>
+                <button class="exit">Back</button>
+            </form>
+        </div>
+    </main>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
